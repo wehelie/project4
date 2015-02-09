@@ -9,6 +9,7 @@
  * Config saved to config.json and https://gist.github.com/6b5a4e476fec98c1638f
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-box-sizing:border-box}.centered{text-align:center}#pizzaSize{font-weight:800}.mover{position:fixed;width:256px;z-index:-1;backface-visibility: hidden;}.randomPizzaContainer{float:left;display:flex}.randomPizzaContainer:after{content:"";display:table;clear:both}
 
 
 img {
