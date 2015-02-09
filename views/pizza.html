@@ -13,6 +13,8 @@
   body {font-family: "Trebuchet MS", Helvetica, sans-serif;background: black;}
   input {background: grey;font-size: 18px;}
   form {display: inline-block;}
+  #centre {text-align: center;}
+  #pizza0,#pizza1{width:33.33%;}
 </style>
 <body>
   <div class="container">
@@ -85,7 +87,7 @@
     </div>
     <div id="locations" class="row">
       <div class="col-md-12">
-        <h2 style="text-align: center">Locations!</h2>
+        <h2 id="centre">Locations!</h2>
         <div class="row">
           <div class="col-md-6">
             <h3>Pizza Road</h3>
@@ -100,7 +102,7 @@
     </div>
     <div id="pizzaGenerator" class="row">
       <div class="col-md-12">
-        <h2 style="text-align: center">Our Pizzas!</h2>
+        <h2 id="centre">Our Pizzas!</h2>
         <div class="row">
           <div class="col-md-12">
             <em>What size pizza would you like? Use the slider below to change pizza sizes.</em>
@@ -111,7 +113,7 @@
           </div>
         </div>
         <div id="randomPizzas" class="row">
-          <div id="pizza0" class="randomPizzaContainer" style="width:33.33%;">
+          <div id="pizza0" class="randomPizzaContainer">
             <div class="col-md-6">
               <img src="images/pizza.png" class="img-responsive">
             </div>
@@ -128,7 +130,7 @@
               </ul>
             </div>
           </div>
-          <div id="pizza1" class="randomPizzaContainer" style="width:33.33%;">
+          <div id="pizza1" class="randomPizzaContainer">
             <div class="col-md-6">
               <img src="images/pizza.png" class="img-responsive">
             </div>
