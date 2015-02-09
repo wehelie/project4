@@ -3,20 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" FILL ME IN ">
-    <meta name="author" content=" FILL ME IN ">
+    <meta name="description" content="Web Performance Optimization Project">
+    <meta name="author" content="Cameron Pittman">
     <title>Cameron Pittman: Portfolio</title>
-
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
+<!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/print.css" rel="stylesheet" media="print">
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
   </head>
   <style>
-    #piz {width: 100px;}
-
+      #piz {width: 100px;}
+      header, footer, .container { max-width: 45em; margin: 0 auto; }
+      .content li { list-style-type: none; font-size: 1.1em;}
+      img { border: 0; max-width: 100%; }
+      header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+      header p span { font-size: 0.8em; font-weight: normal;}
+      li img { float:left; padding-right: 1em; }
   </style>
   <body>
     <header>
@@ -32,7 +35,7 @@
       <div class="content">
         <ul>
           <li>
-            <img src="project4/img/2048.jpg">
+            <img src="img/2048.jpg">
             <a href="project-2048.html">Build Your Own 2048!</a>
             <p>I made my own version of 2048. How cool is that!?</p>
           </li>
