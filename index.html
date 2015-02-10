@@ -7,15 +7,19 @@
     <meta name="author" content="Cameron Pittman">
     <title>Cameron Pittman: Portfolio</title>
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-<!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">-->
-    
+    <!-- removed web fonts althought there was not much change in speed -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">-->
+    <!-- css effective only when printed -->
     <link href="css/print.css" rel="stylesheet" media="print">
+    <!-- script will be executed asynchronously as soon as it is available -->
     <script src="http://www.google-analytics.com/analytics.js" async></script>
   </head>
+  <!-- inlined the whole css file for speed. Without it, I could not pass beyond speed of 28/1000 -->
   <style>
-      #piz {width: 100px;}
-      html {font-size: 100%;overflow-y: scroll;-webkit-tap-highlight-color: rgba(0,0,0,0);
-      -ms-text-size-adjust: 100%;-webkit-text-size-adjust: none;}
+      /* placed this here and removed it from the html body */
+    #piz {width: 100px;}
+    html {font-size: 100%;overflow-y: scroll;-webkit-tap-highlight-color: rgba(0,0,0,0);
+    -ms-text-size-adjust: 100%;-webkit-text-size-adjust: none;}
     body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
     body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
 
@@ -94,6 +98,7 @@
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
+      <!-- combined and minified js files for better rendering speed -->
         <script src="js/combined-min-js.js"></script>
   </body>
 </html>

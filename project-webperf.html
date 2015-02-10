@@ -7,10 +7,14 @@
     <meta name="author" content="Cameron Pittman">
     <title>Cameron Pittman: Portfolio</title>
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-<!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">-->
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">-->
+    <!-- made this css file only apply when the page is printing -->
     <link href="css/print.css" rel="stylesheet" media="print">
+    <!-- added an async attribute to this sense it does not effect DOM -->
     <script src="http://www.google-analytics.com/analytics.js" async></script>
   </head>
+
+  <!-- inlined the whole css file for better loading speed -->
  <style>
       #piz {width: 100px;}
       html {
@@ -90,6 +94,7 @@ footer span { float: right; font-style: italic; }
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
+    <!-- combined all js files and placed them in the bottom for better rendering -->
     <script src="js/combined-min-js.js"></script>
   </body>
 </html>
