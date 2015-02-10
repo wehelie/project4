@@ -446,13 +446,13 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
-    var allPizzaContainers = document.getElementsByClassName("randomPizzaContainer");
+    var allPizza = document.getElementsByClassName("randomPizzaContainer");
   function changePizzaSizes(size) {
     var pizzaContainerLength = allPizzaContainers.length;
     var dx = determineDx(allPizzaContainers[0], size);
-    var newwidth = (allPizzaContainers[0].offsetWidth + dx) + 'px';
+    var newwidth = (allPizza[0].offsetWidth + dx) + 'px';
     for (var i = 0; i < pizzaContainerLength; i++) {
-      allPizzaContainers[i].style.width = newwidth;
+      allPizza[i].style.width = newwidth;
     }
   }
 
@@ -469,13 +469,13 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-function AppendPizza() {
+function appendPizzas() {
     for (var i = 2; i < 100; i++) {
       var pizzasDiv = document.getElementById("randomPizzas");
       pizzasDiv.appendChild(pizzaElementGenerator(i));
     }
 }
-AppendPizza();
+appendPizzas();
 
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
 window.performance.mark("mark_end_generating");
@@ -485,7 +485,7 @@ console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "
 
 // Iterator for number of times the pizzas in the background have scrolled.
 // Used by updatePositions() to decide when to log the average time per frame
-var frame = 0;
+
 
 // Logs the average amount of time per 10 frames needed to move the sliding background pizzas on scroll.
 function logAverageFrame(times) {   // times is the array of User Timing measurements from updatePositions()
@@ -501,12 +501,7 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
 // Moves the sliding background pizzas based on scroll position
-
-var lastKnownScrollY = 0;
-function onScroll() {
-	lastKnownScrollY = window.scrollY;
-}
-
+var frame = 0;
 function updatePositions() {
   requestAnimationFrame(updatePositions);
 
@@ -529,12 +524,16 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
-
+var previousScroll = 0;
+var onScroll = function {
+	previousScroll = window.scrollY;
+};
 // runs updatePositions on scroll
 window.addEventListener('scroll', onScroll);
+
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 6;
+  var cols = 8;
   var s = 400;
   for (var i = 0; i < 100; i++) {
     var elem = document.createElement('img');
