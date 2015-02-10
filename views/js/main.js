@@ -530,10 +530,7 @@ function updatePositions() {
     logAverageFrame(timesToUpdatePosition);
   }
 }
-var previousScroll = 0;
-var onScroll = function {
-	previousScroll = window.scrollY;
-};
+
 // runs updatePositions on scroll
 window.addEventListener('scroll', onScroll);
 // Generates the sliding pizzas when the page loads.
